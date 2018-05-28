@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+
+<head>
+    <title>eval()로 받기</title>
+</head>
+
+<body>
+    <script>
+        document.write("<h3>book 객체 배열 만들기</h3>");
+        document.write("<hr>");
+        var bookArray = [];
+        for (var i = 0; i < 5; i++) {
+            var ret = prompt("콤마(,)로 분리하면서 책제목 저자 가격 순으로 입력", "");
+            var book = new Object();
+            book.name = ret.split(",")[0];
+            book.author = ret.split(",")[1];
+            book.price = parseInt(ret.split(",")[2]);
+            bookArray.push(book);
+            document.write(ret + "<br>");
+        }
+        var getprice = 0;
+        var geti = 0;
+        for (var i = 0; i < bookArray.length; i++) {
+            if (bookArray[i].price >= getprice) {
+                getprice = bookArray[i].price;
+                geti = i;
+            }
+        }
+        document.write("<hr>");
+        document.write("가장 가격이 비싼 책은 " + bookArray[geti].name);
+    </script>
+</body>
+
+</html>
