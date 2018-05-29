@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<FONT face="맑은 고딕">
+    <meta charset="utf-8">
+    <script>
+        function selfClose() {
+            window.open("blank.html", "_self").close();
+        }
+        function getconfirm(paramconfirm, paramalert, windowclose) {
+            isConfirm = confirm(paramconfirm)
+            if (isConfirm) {
+                alert(paramalert)
+                if (windowclose) {
+                    selfClose()
+                }
+            }
+        }
+    </script>
+
+    <head>
+        <title>설문지</title>
+        <style>
+            body {
+                background-color:#F0F0F0;
+            }
+            section {
+                background-color:rgb(223, 223, 223);
+                padding:10px;
+            }
+            strong {
+                color:darkblue;
+                font-family :"휴먼모음T";
+            }
+        </style>
+    </head>
+
+    <body>
+        <header style="text-align:center">
+            <h1 style="color:darkgreen">설문지</h1>
+            <p>기술에 대한 의견을 듣습니다. 많은 참여 부탁드립니다.</p>
+        </header>
+        <hr>
+        <section>
+            <article id="gr">
+                <p>
+                    <br> <strong>학년</strong>
+                    <label><input type="radio" name="grade" value="1" checked> 1학년 </label>
+                    <label><input type="radio" name="grade" value="2"> 2학년</label>
+                    <label><input type="radio" name="grade" value="3"> 3학년</label>
+                    <label><input type="radio" name="grade" value="4"> 4학년</label>
+                </p>
+            </article>
+            <article id="ge">
+                <p>
+                    <br> <strong>성별</strong>
+                    <label><input type="radio" name="gender" value="1" checked> 남</label>
+                    <label><input type="radio" name="gender" value="2"> 여</label>
+                </p>
+            </article>
+            <article id="in">
+                <p>
+                    <br> <strong>관심 분야</strong>
+                    <input type="text" list="interest">
+                    <datalist id="interest">
+                        <option value="모바일 소프트웨어">
+                            <option value="컴퓨터 소프트웨어">
+                                <option value="하드웨어">
+                    </datalist>
+                </p>
+            </article>
+            <article id="dr">
+                <p>
+                    <br> <strong>진로</strong>
+                    <label><input type="checkbox" name="dream" value="1"> 개발</label>
+                    <label><input type="checkbox" name="dream" value="2"> 기획</label>
+                    <label><input type="checkbox" name="dream" value="3"> 영업</label>
+                    <label><input type="checkbox" name="dream" value="4"> 창업</label>
+                </p>
+            </article>
+            <article id="ap">
+                <p>
+                    <strong>남기고 싶은 말</strong>
+                    <br>
+                    <textarea cols="30" rows="10" placeholder="내용을 입력해 주세요"></textarea>
+                </p>
+            </article>
+            <article id ="bt">
+                <p>
+                    <br>
+                    <br>
+                    <button onclick="getconfirm('설문결과를 전송하시겠습니까?', '설문결과가 전송되었습니다.', true)">설문결과 전송하기</button>
+                </p>
+            </article>
+        </section>
+
+
+        <footer>
+            <p>
+                Copyright 2018 by MoonHwan Choi
+            </p>
+        </footer>
+    </body>
+</FONT>
+
+</html>

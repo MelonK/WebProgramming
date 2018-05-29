@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<FONT face="맑은 고딕">
+    <meta charset="utf-8">
+    <script>
+        function winOpen() {
+            mywin = window.open("appform.html","new","width=450,height=650,resizeable=no");
+        }
+        
+        
+    </script>
+    <audio src="data/song/background-bgm.mp3" autoplay loop>
+        이 브라우저는 오디오를 지원하지 않습니다.
+    </audio>
+    <head>
+        <title>컴퓨터의 부품 소개</title>
+        <style>
+            html, body {
+                margin : 0; 
+                padding : 0; 
+                height : 100%;
+            
+            }
+            header {
+                
+                width : 100%;
+                height : 15%;
+                background : lightyellow;
+            }
+            body {
+                white-space: nowrap;
+                background-color:#f0f0f0;
+                white-space:inherit;
+            }
+            nav {
+                width : 15%;
+                height : 70%;
+                background : orange;
+                float:left;
+            }
+            section {
+                width : 84%;
+                height : 70%;
+                float : left;
+                background : lightblue;
+                overflow : scroll;
+                
+            }
+            footer {
+                width : 100%;
+                height : 15%;
+                clear : both;
+                background:lightgreen;
+            }
+            .menu ul li {
+                list-style-type : none;
+            }
+            .menu ul li a {
+                text-decoration: none;
+                font-size: 20px;
+                font-family: "맑은 고딕 Bold";
+                color:black
+            }
+            .menu ul li a:hover {
+                color:white;
+                padding:7px;
+                background-size:cover;
+            }
+            h2 a, h2 {
+                color:black;
+                text-shadow: 0px 0px 5px darkblue;
+                text-decoration : none;
+            }
+            article p {
+                text-indent: 1em;
+            }
+            .appform {
+                border: 2px solid gray;
+                padding: 5px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <header style="text-align:center">
+            <h1 style="color:darkgreen">컴퓨터</h1>
+            컴퓨터는 현대의 과학 기술들 중에서 가장 급속히 발전하고 있는 분야이다. 컴퓨터는 하드웨어와 소프트웨어로 나누어지며, 컴퓨터 하드웨어는 아래와 같이 분류될 수 있다.
+        </header>
+        <nav class = "menu">
+            <ul>
+                <li>
+                    <a href="#CPU">중앙 처리 장치 [CPU]</a>
+                </li>
+                <li>
+                    <a href="#MEMORY">주기억장치 [RAM,ROM]</a>
+                </li>
+                <li>
+                    <a href="#LAN">네트워크 카드 [LAN CARD]</a>
+                </li>
+                <li>
+                    <a href="#HDD">하드 디스크 드라이브 [HDD]</a>
+                </li>
+                <li>
+                    <a href="#PICTURE">컴퓨터 하드웨어 사진</a>
+                </li>
+            </ul>
+        </nav>
+        <section>
+            <article id="CPU">
+                <h2>
+                    <a href="https://ko.wikipedia.org/wiki/중앙_처리_장치" target="_blank">중앙 처리 장치</a>
+                </h2>
+                <p>CPU는 'Central Processing Unit'의 약자로서, 단어 그대로, 컴퓨터의 정중앙에서 모든 데이터를 처리하는 장치이다. 인간의 두뇌와 같은 역할을 하며, 사용자로부터 입력받은
+                    명령어를 해석, 연산한 후 그 결과를 출력하는 일을 한다.</p>
+            </article>
+            <article id="MEMORY">
+                <h2>
+                    <a href="https://ko.wikipedia.org/wiki/주기억장치" target="_blank">주기억장치</a>
+                </h2>
+                <p>과거에는, 자기 코어(Magnetic Core)를 사용해서 0과 1을 기억하게 한 반면에, 현재는 반도체 기억장치를 사용하는 ROM과 RAM을 사용한다.
+                    <ul>
+                        <li>
+                            <b>RAM</b>
+                        </li>
+                        휘발성 메모리라고도 하며, 기억된 내용을 사용자가 임의로 변경할 수 있으며 프로그램이나 자료를 저장할 수 있으나 전원이 꺼지면 기억된 내용이 모두 지워진다.
+                        <li>
+                            <b>ROM</b>
+                        </li>
+                        읽기만 하는 기억장치로서 전원이 끊어져도 기억된 내용이 지워지지 않는다.
+                    </ul>
+                </p>
+            </article>
+            <article id="LAN">
+                <h2>
+                    <a href="https://ko.wikipedia.org/wiki/네트워크_카드" target="_blank">네트워크 카드</a>
+                </h2>
+                <p>영어로 LAN CARD라고 불리며, 이것은 근거리통신망을 뜻하는 랜(LAN)과 비디오카드나 모뎀처럼 PC의 확장슬롯에 꽂혀 사용되는 장치를 의미하는 카드(card)를 합친 뜻이다. 외부와
+                    가장 빠른 속도로 데이터를 주고 받을 수 있는 PC의 통신장치이다.</p>
+            </article>
+            <article id="HDD">
+                <h2>
+                    <a href="https://ko.wikipedia.org/wiki/하드_디스크_드라이브" target="_blank">하드 디스크 드라이브</a>
+                </h2>
+                <p>컴퓨터의 정보와 문서, 자료 등을 저장하고 읽을 수 있는 장치로, 회전속도, 버퍼메모리가 클수록 속도다. 고속으로 디스크를 회전시켜 저장하는 방식이라 충격에 약하며 소음이 다소 발생한다.</p>
+            </article>
+            <article id="PICTURE">
+                <h2>컴퓨터 하드웨어 사진</h2>
+                <p>
+                    <table>
+                        <caption>하드웨어 사진</caption>
+                        <tfoot>
+                            <tr>
+                                <th>중앙 처리 장치</th>
+                                <th>주 기억 장치</th>
+                                <th>네트워크 카드</th>
+                                <th>하드 디스크 드라이브</th>
+                            </tr>
+                        </tfoot>
+                        <tbody>
+                            <tr>
+                                <th>
+                                    <img src="https://img.purch.com/w/450/aHR0cDovL21lZGlhLmJlc3RvZm1pY3JvLmNvbS9FL1cvNTAwNzkyL29yaWdpbmFsL0Jyb2Fkd2VsbC1DUFUuanBn"
+                                        width=100; height=100;>
+                                </th>
+                                <th>
+                                    <img src="http://makeshare.org/data/editor/1701/thumb-90c81f9ad1b9d5bec431c3ad5ba1e3db_1483964103_26_700x322.png" width=200;
+                                        height=100;>
+                                </th>
+                                <th>
+                                    <img src="https://images-na.ssl-images-amazon.com/images/I/41h6m1jrN-L._SX355_.jpg" width=150; height=100;>
+                                </th>
+                                <th>
+                                    <img src="https://images-na.ssl-images-amazon.com/images/I/41WACosHL3L._SL500_AC_SS350_.jpg" width=100; height=100;>
+                                </th>
+                            </tr>
+                        </tbody>
+                    </table>
+                </p>
+            </article>
+        </section>
+        <footer>
+            <p class = "appform">
+                → 가시기 전에 간단한 설문조사 부탁드려요 :)
+                <br><br>
+                <a href="javascript:winOpen()"><button>설문조사 진행하기</button></a>
+            </p>
+            <p>
+                    <br> COPYRIGHT ©
+                    Copyright 2018 by MoonHwan Choi
+            </p>
+        </footer>
+</FONT>
+</body>
+
+</html>
