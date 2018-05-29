@@ -3,6 +3,49 @@
 <FONT face="맑은 고딕">
     <meta charset="utf-8">
     <script>
+        setInterval("Imagechange()", 5000);
+        var getimagelist = -1;
+        var imagelist = ["banner_1.jpg", "banner_2.jpg", "banner_3.jpg"];
+        var idlist = ["bannercircle1", "bannercircle2", "bannercircle3"];
+        var isChange = true;
+        function Imagechange() {
+            if (isChange == true) {
+                getimagelist++;
+                if (getimagelist >= imagelist.length) {
+                    getimagelist = 0;
+                }
+                var img = document.getElementById("banner")
+                img.src = "files/" + imagelist[getimagelist];
+                for (var i = 0; i < imagelist.length; i++) {
+                    if (i == getimagelist) {
+                        color = "red";
+                    } else {
+                        color = "white";
+                    }
+                    document.getElementById(idlist[i]).style.color = color;
+                }
+            }
+            document.getElementById("test").innerHTML = isChange;
+        }
+        function FixImage(paramint) {
+            isChange = false;
+            getimagelist = paramint;
+            var img = document.getElementById("banner")
+            img.src = "files/" + imagelist[getimagelist];
+            for (var i = 0; i < imagelist.length; i++) {
+                if (i == paramint) {
+                    color = "red";
+                } else {
+                    color = "white";
+                }
+                document.getElementById(idlist[i]).style.color = color;
+            }
+        }
+
+        function Not_FixImage() {
+            isChange = true;
+        }
+
     </script>
 
     <head>
@@ -33,7 +76,7 @@
                 height: 50px;
                 background-color: rgb(34, 149, 202);
                 text-align: left;
-                z-index: 5555;
+                z-index: 3;
             }
 
             .menu ul li {
@@ -46,25 +89,47 @@
                 list-style-type: none;
                 padding: 15px 140px 0px 0px;
             }
+
             .menu ul li a {
-                text-decoration : none;
+                text-decoration: none;
                 color: white;
             }
 
             .largedoor {
                 width: 1000px;
                 margin: 0 auto;
+                padding: 0px;
                 position: relative;
             }
 
             .largedoor img {
                 width: 1000px;
+                height: 400px;
+            }
 
+            #banner {
+                z-index: 1;
+            }
+
+            #bannercircle1,
+            #bannercircle2,
+            #bannercircle3 {
+                display: inline-block;
+                position: relative;
+                top: 385px;
+                left: 10px;
+                z-index: 2;
+            }
+
+            #bannercircle1:hover,
+            #bannercircle2:hover,
+            #bannercircle3:hover {
+                color: black;
             }
         </style>
     </head>
 
-    <body>
+    <body onload="javascript:Imagechange()">
         <header>
             <div class="header_group">
                 <img src="files/banner.png">
@@ -93,7 +158,17 @@
         </header>
         <section>
             <div class="largedoor">
-                <img src="files/banner_1.jpg" alt="">
+
+                <img id="banner" src="" alt="">
+                <div id="bannercircle1" onmouseover="javascript:FixImage(0)" onmouseout="Not_FixImage()">
+                    ●
+                </div>
+                <div id="bannercircle2" onmouseover="javascript:FixImage(1)" onmouseout="Not_FixImage()">
+                    ●
+                </div>
+                <div id="bannercircle3" onmouseover="javascript:FixImage(2)" onmouseout="Not_FixImage()">
+                    ●
+                </div>
             </div>
         </section>
     </body>
