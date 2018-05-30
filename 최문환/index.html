@@ -4,18 +4,45 @@
     <meta charset="utf-8">
     <script>
         setInterval("Imagechange()", 5000);
+        var loaded = false;
+        var opacity1 = 1;
+        var opacity2 = 0;
         var getimagelist = -1;
+        var getoldparamint = -1;
         var imagelist = ["banner_1.jpg", "banner_2.jpg", "banner_3.jpg"];
         var idlist = ["bannercircle1", "bannercircle2", "bannercircle3"];
+        var imageidlist = ["banner1", "banner2", "banner3"];
         var isChange = true;
         function Imagechange() {
             if (isChange == true) {
+
                 getimagelist++;
                 if (getimagelist >= imagelist.length) {
                     getimagelist = 0;
                 }
-                var img = document.getElementById("banner")
+                var img = document.getElementById(imageidlist[getimagelist])
                 img.src = "files/" + imagelist[getimagelist];
+                if (loaded) {
+                    for (var i = 0; i < imageidlist.length; i++) {
+                        if (i == getimagelist) {
+                            document.getElementById(imageidlist[i]).style.zIndex = 1;
+                        } else {
+                            document.getElementById(imageidlist[i]).style.zIndex = 0;
+                        }
+                        document.getElementById(imageidlist[getimagelist]).style.opacity = 0;
+                    }
+                    var opchange = setInterval(function () {
+                        if (opacity2 < 1) {
+                            opacity2 += 0.1;
+                            document.getElementById(imageidlist[getimagelist]).style.opacity = opacity2;
+                        } else {
+                            opacity2 = 0;
+                            clearInterval(opchange);
+                        }
+                    }, 50);
+                }
+                loaded = true;
+
                 for (var i = 0; i < imagelist.length; i++) {
                     if (i == getimagelist) {
                         color = "red";
@@ -24,29 +51,51 @@
                     }
                     document.getElementById(idlist[i]).style.color = color;
                 }
+                getoldparamint = getimagelist;
             }
-            document.getElementById("test").innerHTML = isChange;
         }
         function FixImage(paramint) {
-            isChange = false;
-            getimagelist = paramint;
-            var img = document.getElementById("banner")
-            img.src = "files/" + imagelist[getimagelist];
-            for (var i = 0; i < imagelist.length; i++) {
-                if (i == paramint) {
-                    color = "red";
-                } else {
-                    color = "white";
+            if (getoldparamint != paramint) {
+                opacity2 = 0;
+                isChange = false;
+                getimagelist = paramint;
+                var img = document.getElementById(imageidlist[paramint]);
+                img.src = "files/" + imagelist[getimagelist];
+                for (var i = 0; i < imageidlist.length; i++) {
+                    if (i == paramint) {
+                        document.getElementById(imageidlist[i]).style.zIndex = 2;
+                    } else if (i == getoldparamint) {
+                        document.getElementById(imageidlist[i]).style.zIndex = 1;
+                    } else {
+                        document.getElementById(imageidlist[i]).style.zIndex = 0;
+                    }
+                    document.getElementById(imageidlist[getimagelist]).style.opacity = 0;
                 }
-                document.getElementById(idlist[i]).style.color = color;
+                var opchange = setInterval(function () {
+                    if (opacity2 < 1) {
+                        opacity2 += 0.1;
+                        document.getElementById(imageidlist[paramint]).style.opacity = opacity2;
+                    } else {
+                        opacity2 = 0;
+                        clearInterval(opchange);
+                    }
+                }, 50);
+                for (var i = 0; i < imagelist.length; i++) {
+                    if (i == paramint) {
+                        color = "red";
+                    } else {
+                        color = "white";
+                    }
+                    document.getElementById(idlist[i]).style.color = color;
+                    document.getElementById("test").innerHTML = getoldparamint;
+                    getoldparamint = paramint;
+                }
             }
         }
 
         function Not_FixImage() {
             isChange = true;
         }
-
-
     </script>
 
     <head>
@@ -77,7 +126,7 @@
                 height: 50px;
                 background-color: rgb(34, 149, 202);
                 text-align: left;
-                z-index: 3;
+                z-index: 5;
             }
 
             .menu ul li {
@@ -107,8 +156,18 @@
                 height: 400px;
             }
 
-            #banner {
+            #banner1 {
                 z-index: 1;
+            }
+
+            #banner2 {
+                opacity: 0;
+                z-index: 2;
+            }
+
+            #banner3 {
+                opacity: 0;
+                z-index: 3;
             }
 
             #bannercircle1,
@@ -118,7 +177,7 @@
                 position: relative;
                 top: 385px;
                 left: 10px;
-                z-index: 2;
+                z-index: 2147483647;
             }
 
             #bannercircle1:hover,
@@ -161,7 +220,9 @@
         <section>
             <div class="largedoor">
 
-                <img id="banner" src="" alt="">
+                <img id="banner1" src="" alt="">
+                <img id="banner2" src="" alt="">
+                <img id="banner3" src="" alt="">
                 <div id="bannercircle1" onmouseover="javascript:FixImage(0)" onmouseout="Not_FixImage()">
                     ●
                 </div>
@@ -173,6 +234,7 @@
                 </div>
             </div>
         </section>
+        <div id="test"></div>
     </body>
 </FONT>
 
