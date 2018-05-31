@@ -1,5 +1,8 @@
 h2 {margin: 0%; font-size: 70px; 
     text-align: center;}
+* {margin: 0;
+padding: 0;
+border: 0;}
 .bar {width: 100%;
     position: relative;
     height: 50px;
