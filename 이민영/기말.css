@@ -1,0 +1,31 @@
+h2 {margin: 0%; font-size: 70px; 
+    text-align: center;}
+.bar {width: 100%;
+    position: relative;
+    height: 50px;
+    background-color: goldenrod;
+    text-align: left;
+    }
+.bar2 {width: 1000px;
+    height: 77px;
+    margin: 0 auto;
+    position: relative;}
+ul {overflow:hidden;}
+ul li {display: inline-block;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: left;
+    list-style-type: none;
+    padding: 15px 140px 0px 0px;}
+ul li a {text-decoration: none; 
+    color: white;}
+ul li a:hover {color: aqua;}
+.box {display:none;}
+ul ul {display: none; 
+    position: absolute;
+    background-color: goldenrod;
+    float: none;
+    padding: 0;
+    margin: 0;}
+ul li:hover ul {display: block;}
+ul ul li {float: none;}
