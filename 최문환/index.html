@@ -2,11 +2,19 @@
 <html>
 <FONT face="맑은 고딕">
     <meta charset="utf-8">
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.content1').show();
+        });
+    </script>
     <script>
         setInterval("Imagechange()", 5000);
+        setInterval("Contentchange()", 2000);
         var loaded = false;
         var opacity1 = 1;
         var opacity2 = 0;
+        var getcontentlist = 1;
         var getimagelist = -1;
         var getoldparamint = -1;
         var imagelist = ["banner_1.jpg", "banner_2.jpg", "banner_3.jpg"];
@@ -87,7 +95,6 @@
                         color = "white";
                     }
                     document.getElementById(idlist[i]).style.color = color;
-                    document.getElementById("test").innerHTML = getoldparamint;
                     getoldparamint = paramint;
                 }
             }
@@ -96,11 +103,40 @@
         function Not_FixImage() {
             isChange = true;
         }
+
+        function Contentchange() {
+            contentarray = ['.content1','.content2','.content3','.content4','.content5'];
+            $(document).ready(function () {
+                for (i=0; i<contentarray.length; i++) {
+                    if (i == getcontentlist) {
+                        $(contentarray[i]).toggle('active');
+                    } else {
+                        $(contentarray[i]).hide('active');
+                    }
+                }
+                for (i=0; i<contentarray.length; i++) {
+                    if ($(contentarray[i]).hasClass('active')) {
+                        $(contentarray[i]).removeClass('active');
+                    } else {
+                        $('.oneline-table-content .content').removeClass('active');
+                        $(contentarray[i]).addClass('active');
+                    }
+                }
+                getcontentlist++;
+                if (getcontentlist >= contentarray.length) {
+                    getcontentlist = 0;
+                }
+            });
+        }
     </script>
 
     <head>
         <title>경주 투어</title>
         <style>
+            .box {
+                display : none;
+            }
+
             img {
                 position: absolute;
                 top: 15px;
@@ -114,7 +150,7 @@
 
             .header_group,
             .menu {
-                width: 1000px;
+                width: 1280px;
                 height: 77px;
                 margin: 0 auto;
                 position: relative;
@@ -145,17 +181,17 @@
             }
 
             .largedoor {
-                width: 1000px;
-                height : 415px;
+                width: 1280px;
+                height: 415px;
                 margin: 0 auto;
                 padding: 0px;
                 position: relative;
             }
 
             .largedoor img {
-                width: 1000px;
+                width: 1280px;
                 height: 400px;
-                border : 1px solid rgb(112, 112, 112);
+                border: 1px solid rgb(112, 112, 112);
             }
 
             #banner1 {
@@ -179,7 +215,7 @@
                 position: relative;
                 top: 385px;
                 left: 10px;
-                z-index: 2147483647;
+                z-index: 3;
             }
 
             #bannercircle1:hover,
@@ -189,21 +225,46 @@
             }
 
             .oneline {
-                width : 1000px;
-                height : 50px;
-                position : relative;
-                margin : 0 auto;
-                top : 15px;
-                border : 1px solid rgb(112, 112, 112);
-                background-color : white;
-                line-height : 50px;
+                width: 1280px;
+                height: 30px;
+                position: relative;
+                margin: 0 auto;
+                top: 15px;
+            }
+
+            .oneline-table {
+                border-collapse: collapse;
+                line-height: 30px;
+                width: 1280px;
+            }
+
+            .oneline-table td {
+                border: 1px solid rgb(200, 200, 200);
+                background-color: white;
+                height: 30px;
+            }
+
+            .oneline-table .oneline-table-name {
+                font-weight: bold;
+                border-right: 0px;
+            }
+
+            .oneline-table .oneline-table-content {
+                border-left: 0px;
+                width: 1180px;
+            }
+
+            .rightarrow {
+                position: relative;
+                top: 0px;
             }
 
             header {
-                background-color : white;
+                background-color: white;
             }
+
             body {
-                background-color : rgb(245,245,245);
+                background-color: rgb(245, 245, 245);
             }
         </style>
     </head>
@@ -254,8 +315,20 @@
             </div>
         </section>
         <section>
-            <div class = "oneline">
-                하하하
+            <div class="oneline">
+                <table class="oneline-table">
+                    <tr>
+                        <td class="oneline-table-name">&nbsp;트렌드
+                            <img src="files/rightarrow.png" alt="오른쪽 화살표" class="rightarrow">&nbsp;</td>
+                        <td class="oneline-table-content">
+                            <div class="box content1">신라의 흔적을 따라 떠나는 여행 패키지! 30% 할인</div>
+                            <div class="box content2">찰보리빵보다 맛있다는 주령구빵에 대해서 아십니까?</div>
+                            <div class="box content3">방학때 친구들과 같이 가자! 경주월드 할인!</div>
+                            <div class="box content4">개성 넘치는 가게들의 향연, 황리단길에 방문해 보세요!</div>
+                            <div class="box content5">가족끼리 오붓한 시간을 보내고 싶다면? 경주보문관광단지로 떠나자!</div>
+                        </td>
+                    </tr>
+                </table>
             </div>
         </section>
     </body>
