@@ -81,12 +81,25 @@
               else{           $('.menu .item').removeClass('active');
                 $(this).addClass('active');        }     })  }) 
     </script>
+    <script>
+        var imgs = [
+         '사진/디스크.png',
+         '사진/하드.jpg',   
+         '사진/구름.jpg',  
+         '사진/바이오.jpg'
+        ]
+        var count = 0
+        setInterval(function() {
+            if(count==imgs.length) { count = 0;}
+            document.getElementById('myImg').src = imgs[count++]; 
+        }, 3000); 
+    </script>
 </head>
 <body>
     <h2><img src="사진/방패.png" width="70" height="70">Antivirus</h2>
     <div class="bar">
         <div class="bar2">
-    <ul class="menu">
+    <ul class="menu" id="메뉴판">
         <li class="item1"><a href="#">HOME</a></li>
         <li class="item2"><a href="#">역사</a></li>
         <li class="item3"><a href="#">기능</a></li>
@@ -104,8 +117,38 @@
     안철수는 자신의 컴퓨터에 감염된 브레인 바이러스를 컴퓨터 언어로 치료한 후 누구나 쉽게 쓸 수 있는 치료 소프트웨어를 만들어<br>
     ‘백신(Vaccine)’이라고 이름을 붙였다. 그 뒤 'V2', 'V2 플러스(V2plus)' 등으로 진화하였으며,<br>
     'V3'라는 이름의 보안 프로그램은 1991년에 처음 발표되었다.</div>
-   <div class="box box2">안티 바이러스 소프트웨어의 종류는 많지만 특징은 비슷하다.<br>  
-        이들은 주로 악성코드를 탐지하고 치료하는 역할을 수행한다.<br>
-        매일 늘어나는 악성코드에 대비하기 위해 거의 모든 백신에는 자동 업데이트 기능이 묶여 있으며, 백신에 따라 다르지만 방화벽 등도 있기도 한다.</div>
+   <div class="box box2"><img src="사진/디스크.png" id="myImg" width="150" height="150"></div>
+   <div></div>
+   <div class="box box4">
+       <ul id="종류">
+           <li>한국
+             <table border="5">
+              <tbody>
+                    <tr><th>사진</th><th>설명</th></tr>
+               <tr>
+                   <td><img src="사진/v3.jpg" width="200px" height="200px"></td>
+                   <td>V3<br></td>
+               </tr>
+               <tr>
+                   <td><img src="사진/알약.jpg" width="200px" height="200px"></td>
+                   <td></td>
+               </tr>
+              </tbody>
+             </table>  
+           </li>
+           <li>외국
+             <table border="5">
+                <tr>
+                    <td><img src="사진/avast.jpg" width="200px" height="200px"></td>
+                    <td></td> 
+                </tr>
+                <tr>
+                    <td><img src="사진/카스퍼스키.jpg" width="200px" height="200px"></td>
+                    <td></td>
+                </tr>
+             </table>
+           </li>   
+       </ul>
+   </div>
         </body>
 </html>
