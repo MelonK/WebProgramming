@@ -1,85 +1,91 @@
 <!DOCTYPE html>
 <html lang="kr">
+
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
     <link rel="stylesheet" href="기말.css" type="text/css">
     <script src="http://code.jquery.com/jquery-latest.js"></script>
     <script>
-     $(document).ready(function() {
-      $('.box1').show(); 
-      $('.item1').click(function(){ 
-      $('.box1').toggle('active'); 
-      $('.box2').hide('active'); 
-      $('.box3').hide('active');
-      $('.box4').hide('active'); 
-      $('.box5').hide('active');
-      $('.box6').hide('active'); 
-      $('.box7').hide('active');  
-      }) 
-      $('.item2').click(function(){ 
-      $('.box1').hide('active'); 
-      $('.box2').toggle('active'); 
-      $('.box3').hide('active');
-      $('.box4').hide('active');
-      $('.box5').hide('active');
-      $('.box6').hide('active'); 
-      $('.box7').hide('active');   
-      }) 
-      $('.item3').click(function(){ 
-      $('.box1').hide('active');
-      $('.box2').hide('active'); 
-      $('.box3').toggle('active');
-      $('.box4').hide('active'); 
-      $('.box5').hide('active');
-      $('.box6').hide('active'); 
-      $('.box7').hide('active');  
-      })
-      $('.item4').click(function(){ 
-      $('.box1').hide('active'); 
-      $('.box2').hide('active'); 
-      $('.box3').hide('active'); 
-      $('.box4').toggle('active'); 
-      $('.box5').hide('active');
-      $('.box6').hide('active'); 
-      $('.box7').hide('active'); 
-      })
-      $('.item5').click(function(){ 
-      $('.box1').hide('active'); 
-      $('.box2').hide('active'); 
-      $('.box3').hide('active'); 
-      $('.box4').hide('active'); 
-      $('.box5').toggle('active');
-      $('.box6').hide('active'); 
-      $('.box7').hide('active');
-      })
-      $('.item6').click(function(){ 
-      $('.box1').hide('active'); 
-      $('.box2').hide('active'); 
-      $('.box3').hide('active'); 
-      $('.box4').hide('active'); 
-      $('.box5').hide('active');
-      $('.box6').toggle('active'); 
-      $('.box7').hide('active');  
-      })
-      $('.item7').click(function(){ 
-      $('.box1').hide('active'); 
-      $('.box2').hide('active'); 
-      $('.box3').hide('active'); 
-      $('.box4').hide('active'); 
-      $('.box5').hide('active');
-      $('.box6').hide('active'); 
-      $('.box7').toggle('active');    
-      }) 
-      })
+        $(document).ready(function () {
+            $('.box1').show();
+            $('.item1').click(function () {
+                $('.box1').toggle('active');
+                $('.box2').hide('active');
+                $('.box3').hide('active');
+                $('.box4').hide('active');
+                $('.box5').hide('active');
+                $('.box6').hide('active');
+                $('.box7').hide('active');
+            })
+            $('.item2').click(function () {
+                $('.box1').hide('active');
+                $('.box2').toggle('active');
+                $('.box3').hide('active');
+                $('.box4').hide('active');
+                $('.box5').hide('active');
+                $('.box6').hide('active');
+                $('.box7').hide('active');
+            })
+            $('.item3').click(function () {
+                $('.box1').hide('active');
+                $('.box2').hide('active');
+                $('.box3').toggle('active');
+                $('.box4').hide('active');
+                $('.box5').hide('active');
+                $('.box6').hide('active');
+                $('.box7').hide('active');
+            })
+            $('.item4').click(function () {
+                $('.box1').hide('active');
+                $('.box2').hide('active');
+                $('.box3').hide('active');
+                $('.box4').toggle('active');
+                $('.box5').hide('active');
+                $('.box6').hide('active');
+                $('.box7').hide('active');
+            })
+            $('.item5').click(function () {
+                $('.box1').hide('active');
+                $('.box2').hide('active');
+                $('.box3').hide('active');
+                $('.box4').hide('active');
+                $('.box5').toggle('active');
+                $('.box6').hide('active');
+                $('.box7').hide('active');
+            })
+            $('.item6').click(function () {
+                $('.box1').hide('active');
+                $('.box2').hide('active');
+                $('.box3').hide('active');
+                $('.box4').hide('active');
+                $('.box5').hide('active');
+                $('.box6').toggle('active');
+                $('.box7').hide('active');
+            })
+            $('.item7').click(function () {
+                $('.box1').hide('active');
+                $('.box2').hide('active');
+                $('.box3').hide('active');
+                $('.box4').hide('active');
+                $('.box5').hide('active');
+                $('.box6').hide('active');
+                $('.box7').toggle('active');
+            })
+        })
     </script>
     <script>
-    $(document).ready(function() {
-         $('.menu .item').click(function(){
-          if($(this).hasClass('active')){
-            $(this).removeClass('active');           }
-              else{           $('.menu .item').removeClass('active');
-                $(this).addClass('active');        }     })  }) 
+        $(document).ready(function () {
+            $('.menu .item').click(function () {
+                if ($(this).hasClass('active')) {
+                    $(this).removeClass('active');
+                }
+                else {
+                    $('.menu .item').removeClass('active');
+                    $(this).addClass('active');
+                }
+            })
+        }) 
     </script>
     <script>
         var imgs = [
@@ -95,8 +101,10 @@
         }, 3000); 
     </script>
 </head>
+
 <body>
-    <h2><img src="사진/방패.png" width="70" height="70">Antivirus</h2>
+    <h2>
+        <img src="사진/방패.png" width="70" height="70">Antivirus</h2>
     <div class="bar">
         <div class="bar2">
     <ul class="menu" id="메뉴판">
@@ -112,26 +120,55 @@
     </ul>
         </div>
     </div>     
-   <div class="box box1">대한민국 최초의 안티 바이러스 프로그램. 1988년 6월 당시 의대 박사 과정에 있던 안철수는<br>
-    컴퓨터 바이러스인 브레인을 치료하기 위해, 바이러스 검사 프로그램을 개발하였다.<br>
-    안철수는 자신의 컴퓨터에 감염된 브레인 바이러스를 컴퓨터 언어로 치료한 후 누구나 쉽게 쓸 수 있는 치료 소프트웨어를 만들어<br>
-    ‘백신(Vaccine)’이라고 이름을 붙였다. 그 뒤 'V2', 'V2 플러스(V2plus)' 등으로 진화하였으며,<br>
-    'V3'라는 이름의 보안 프로그램은 1991년에 처음 발표되었다.</div>
-   <div class="box box2"><img src="사진/디스크.png" id="myImg" width="150" height="150"></div>
-   <div></div>
+   <div class="box box1">수많은 외부에 의한 공격속에서 당신의 정보를 지켜주는것은 바로 "안티바이러스!"
+       여러 안티바이러스 소프트웨어에 대해알아보고 역사와 기능, 종류를 소개시켜드리겠습니다!
+       우리가 쓰는 안티바이러스 소프트웨어는 어떤건지 또 어떤기능을 하고 무엇있는지 또 각 프로그램들의 성능 어떠한지 알아보겠습니다!</div>
+   <div class="box box2"><img src="사진/디스크.png" id="myImg" width="150" height="150">
+    첫 백신 프로그램이 무엇인가는 확실하지 않다. 다만 처음으로 문서화된 컴퓨터 바이러스 제거 프로그램은 1987년 발표된 번트 픽스(Bernd Fix)인 것으로 알려져 있다.
+    이후에도 첫 개인용 컴퓨터 바이러스인 브레인 바이러스를 제거하는 목적으로 제작된 현V3에 시초라 부르는 V1이 등장하고 이떄 이름인 Vaccine.com으로인해 
+    국내에 백신프로그램 이라는 것이 안티바이러스프로그램 단어로서 보편화된것이다.
+    이후 플로피디스크에서만 퍼지던 바이러스들이 인터넷에 발달로 점차 쉽고빠르게 확산되어가면서 안티바이러스 소프트웨어도 이와같이
+    발전하면 커져갔다. 이후 많은 백신프로그램들이 등장하고 이후 바이러스뿐만아니라 해커에 공격에 대응하며 실시간감시, 웹감시, 방화벽등 많은기능들이 추가되었다.
+   </div>
+   <div class="box box3">
+       <ul>
+           <li>악성코드 검사<br>
+            가장 대표적인 기능으로 컴퓨터에 감염된 악성코드, 바이러스를 검사하고 제거하는 역할을한다.
+            악성코드들은 변종이 쉽게 만들어지고 또 백신을 무력화시키기위해 발전해가는데 이를 막기위해 백신역시
+            자동업데이트기능을 가지고있으면 현재는 수많은 바이러스들을 막기위해 각국 보안업체가 서로 바이러스패턴을
+            공유하면서 악성코드를 막기위해 노력하고있다.
+           </li>
+           <li>실시간 감시<br>
+            실시간 감시는 사용자가 작업을 하고있는 동안에도 감시를 통해 바이러스나 해커에 공격에 대비하고 대응하는 일을한다.
+            실시간 검사중에서는 웹감시, 메일감시, usb감시가 있으며 사용자가 사용하는 즉시 검사해 위험성을 판단한다.
+           </li>
+           <li>추가기능<br>
+           백신에 따라 상이하기는 하지만 여러가지 기능들을 제공하는데 방화벽, 샌드박스기능, PC최적화, 가짜웹 감시등
+           예전에 없던 편의기능을 제공하면서 사용자편의를 증진시키고있다.
+           </li>
+           
+       </ul>
+   </div>
    <div class="box box4">
        <ul id="종류">
            <li>한국
              <table border="5">
               <tbody>
-                    <tr><th>사진</th><th>설명</th></tr>
                <tr>
                    <td><img src="사진/v3.jpg" width="200px" height="200px"></td>
-                   <td>V3<br></td>
+                   <td>V3<br>안랩에서 제작한 국내순수 안티바이러스 소프트웨어.
+                   한국에서 백신이 안티바이러스 소프트웨어와 동일한 뜻으로 불리게할정도로 영향력있었다.
+                   기존 해외엔진을 사용하던 국내백신과달리 자제개발엔진으로 제작된 최초의 국산백신이다.
+                   현제까지도 많은 사람들이 이용하고 있으며 과거 오진과 오류로 실추된 명성을 백신성능검사에서
+                   당당히 순위권에 들으며 명예를 되찾는중이다. 현재 가볍고 뛰어난 성능을 자랑한다.
+                   V3란 이름은 초기 V1에서 V2그리고 V3가된것인데 V3가 인지도와 인기가 높아 V3란 명칭으로 쓰이고있다.</td>
                </tr>
                <tr>
                    <td><img src="사진/알약.jpg" width="200px" height="200px"></td>
-                   <td></td>
+                   <td>알약<br>이스트시큐리티가 개발,배포하는 국내 안티바이러스 소프트웨어.
+                   알약은 루마니아의 백신 '비트디펜터'에 바이러스 엔진가 자체개발한 테라엔진합쳐 제작된 백신이다.
+                   많은 오진과 부족한 기술력 과도한 광고로 비판받고있지만 국내에서는 V3와 나란히 높은 점유율을
+                   차지하고있는 백신이다. 국내 모바일 백신 점유율에서는 1위를 차지할정도로 비판에 비해 높은 인기를 보인다.</td>
                </tr>
               </tbody>
              </table>  
@@ -140,11 +177,17 @@
              <table border="5">
                 <tr>
                     <td><img src="사진/avast.jpg" width="200px" height="200px"></td>
-                    <td></td> 
+                    <td>AVAST<br>체코에있는 Avast Software에서 제작한 안티바이러스 소프트웨어.
+                    국내에서는 어베스트라고 불리고있으며 여러가지 많은 기능들과 가벼우면서도 높은 성능을
+                    자랑하면서 전세계 백신 점유율 1위를 차지하고있을 정도로 큰 인기가있다. 다만 국내에서는
+                    낮은 인지도와 사후관리및 서비스등에 불편으로인해 낮은 점유율을 보이고 있다.</td> 
                 </tr>
                 <tr>
-                    <td><img src="사진/카스퍼스키.jpg" width="200px" height="200px"></td>
-                    <td></td>
+                    <td><img src="사진/ESET.jpg" width="200px" height="200px"></td>
+                    <td>ESET<br>슬로바키아의 소프웨어화사이자 여기서 제작된 안티바이러스 소프트웨어.
+                    준수한 성능과 가벼운 시스템 점유율 업계 최저 수준의 오진율을 자랑하며 유료백신 부분에서
+                    점유율1위를 차지하는 백신이다. 국내에서는 크게 인지도가 없지만 해외에서는 높은 인기를 자랑하고
+                    또 VB100이라불리는 테스트에서 세계최초로 100회인증을 받으면서 성능,안정성에서 그 누구에게 뒤지지않음을 보였다.</td>
                 </tr>
              </table>
            </li>   
