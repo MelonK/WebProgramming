@@ -17,7 +17,7 @@
         var getcontentlist = 1;
         var getimagelist = -1;
         var getoldparamint = -1;
-        var imagelist = ["banner_1.jpg", "banner_2.jpg", "banner_3.jpg"];
+        var imagelist = ["banner_1.png", "banner_2.png", "banner_3.png"];
         var idlist = ["bannercircle1", "bannercircle2", "bannercircle3"];
         var imageidlist = ["banner1", "banner2", "banner3"];
         var isChange = true;
@@ -105,16 +105,16 @@
         }
 
         function Contentchange() {
-            contentarray = ['.content1','.content2','.content3','.content4','.content5'];
+            contentarray = ['.content1', '.content2', '.content3', '.content4', '.content5'];
             $(document).ready(function () {
-                for (i=0; i<contentarray.length; i++) {
+                for (i = 0; i < contentarray.length; i++) {
                     if (i == getcontentlist) {
                         $(contentarray[i]).toggle('active');
                     } else {
                         $(contentarray[i]).hide('active');
                     }
                 }
-                for (i=0; i<contentarray.length; i++) {
+                for (i = 0; i < contentarray.length; i++) {
                     if ($(contentarray[i]).hasClass('active')) {
                         $(contentarray[i]).removeClass('active');
                     } else {
@@ -128,60 +128,19 @@
                 }
             });
         }
+
+        function move(locate) {
+            location.href=locate;
+        }
     </script>
 
     <head>
         <title>경주 투어</title>
+        <link rel="stylesheet" href="index.css" type="text/css">
         <style>
-            .box {
-                display : none;
-            }
-
-            img {
-                position: absolute;
-                top: 15px;
-            }
-
-            * {
-                padding: 0;
-                margin: 0;
-                border: 0;
-            }
-
-            .header_group,
-            .menu {
-                width: 1280px;
-                height: 77px;
-                margin: 0 auto;
-                position: relative;
-            }
-
-            .bar {
-                width: 100%;
-                position: relative;
-                height: 50px;
-                background-color: rgb(34, 149, 202);
-                text-align: left;
-                z-index: 5;
-            }
-
-            .menu ul li {
-                display: inline-block;
-                font-size: 15px;
-                font-family: "맑은 고딕";
-                font-weight: bold;
-                text-align: left;
-                list-style-type: none;
-                padding: 15px 140px 0px 0px;
-            }
-
-            .menu ul li a {
-                text-decoration: none;
-                color: white;
-            }
 
             .largedoor {
-                width: 1280px;
+                width: 1000px;
                 height: 415px;
                 margin: 0 auto;
                 padding: 0px;
@@ -189,7 +148,7 @@
             }
 
             .largedoor img {
-                width: 1280px;
+                width: 1000px;
                 height: 400px;
                 border: 1px solid rgb(112, 112, 112);
             }
@@ -225,7 +184,7 @@
             }
 
             .oneline {
-                width: 1280px;
+                width: 1000px;
                 height: 30px;
                 position: relative;
                 margin: 0 auto;
@@ -235,13 +194,54 @@
             .oneline-table {
                 border-collapse: collapse;
                 line-height: 30px;
-                width: 1280px;
+                width: 1000px;
+            }
+
+            .atc-table {
+                border-collapse: collapse;
+                line-height : 45px;
+            }
+
+            .atc {
+                margin: 0 auto;
+                top: 30px;
+                width: 1000px;
+            }
+
+            .atc div {
+                display: inline-block;
+                margin: 10px 10px 0px 0px;
+                width: 235px;
+                height: 235px;
+            }
+
+            .atc div:hover {
+                box-shadow: 0 0 5px blue;
+            }
+
+            .atc td {
+                white-space:nowrap;
+                max-width: 230.5px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+
+            .atc td img {
+                width: 230.5px;
+                height: 185px;
+                top : 0px;
+                position:relative;
             }
 
             .oneline-table td {
                 border: 1px solid rgb(200, 200, 200);
                 background-color: white;
                 height: 30px;
+            }
+
+            .atc-table td {
+                border: 1px solid rgb(200, 200, 200);
+                background-color: white;
             }
 
             .oneline-table .oneline-table-name {
@@ -251,7 +251,10 @@
 
             .oneline-table .oneline-table-content {
                 border-left: 0px;
-                width: 1180px;
+                width: 900px;
+            }
+            .atc-table-content {
+                line-height : 0;
             }
 
             .rightarrow {
@@ -280,19 +283,19 @@
                 <div class="menu" style="height:50px; overflow:hidden;">
                     <ul>
                         <li>
-                            <a href="http://www.naver.com/">관광지</a>
+                            <a href="sightsee.html">관광지</a>
                         </li>
                         <li>
-                            <a href="http://www.naver.com/">맛집</a>
+                            <a href="eating.html">맛집</a>
                         </li>
                         <li>
-                            <a href="http://www.naver.com/">테마 여행</a>
+                            <a href="theme.html">테마 여행</a>
                         </li>
                         <li>
-                            <a href="http://www.naver.com/">숙소</a>
+                            <a href="sleep.html">숙소</a>
                         </li>
                         <li>
-                            <a href="http://www.naver.com/">관광객 리뷰</a>
+                            <a href="review.html">관광객 리뷰</a>
                         </li>
                     </ul>
                 </div>
@@ -329,6 +332,59 @@
                         </td>
                     </tr>
                 </table>
+            </div>
+        </section>
+        <br>
+        <section>
+            <div class="atc">
+                <div class="atc1" onclick="move('http://www.nspna.com/photo/?mode=view&newsid=285640')">
+                    <table class="atc-table">
+                        <tr>
+                            <td>경주시, 숙박시설 위생서비스 평가 실시</td>
+                        </tr>
+                        <tr>
+                            <td class="atc-table-content">
+                                <img src="files/art_1.jpg" alt="">
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="atc2" onclick="move('http://www.breaknews.com/sub_read.html?uid=570269&section=sc5')">
+                    <table class="atc-table">
+                        <tr>
+                            <td>경주 보문단지 첨성대 꽃탑, 황홀한 자태 드러내</td>
+                        </tr>
+                        <tr>
+                            <td class="atc-table-content">
+                                <img src="http://dk.breaknews.com/imgdata/dk_breaknews_com/201804/2018040307368892.jpg" alt="">
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="atc3" onclick="move('http://www.yonhapnews.co.kr/bulletin/2018/06/11/0200000000AKR20180611073800005.HTML?input=1195m')">
+                    <table class="atc-table">
+                        <tr>
+                            <td>황룡사·감은사 진신사리 불국사에 봉안한다.</td>
+                        </tr>
+                        <tr>
+                            <td class="atc-table-content">
+                                <img src="http://img.yonhapnews.co.kr/etc/inner/KR/2018/06/11/AKR20180611073800005_01_i.jpg" alt="">
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="atc4" onclick="move('http://www.nocutnews.co.kr/news/4982991')">
+                    <table class="atc-table">
+                        <tr>
+                            <td>경주엑스포공원, 정문 '황금의 나라'로 새단장</td>
+                        </tr>
+                        <tr>
+                            <td class="atc-table-content">
+                                <img src="http://file2.nocutnews.co.kr/newsroom/image/2018/06/11/20180611084629911013_6_635_423.jpg" alt="">
+                            </td>
+                        </tr>
+                    </table>
+                </div>
             </div>
         </section>
     </body>
