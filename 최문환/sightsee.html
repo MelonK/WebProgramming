@@ -21,6 +21,20 @@
             }
             x[imgSet - 1].style.display = 'block';
         }
+        function on() {
+            imgSet++;
+            if (imgSet > document.getElementsByClassName('ssee').length) {
+                imgSet  = 1;
+            }
+            ImgSet();
+        }
+        function off() {
+            imgSet--;
+            if (imgSet <= 0) {
+                imgSet  = document.getElementsByClassName('ssee').length;
+            }
+            ImgSet();
+        }
     </script>
     <style>
         html,
@@ -90,9 +104,9 @@
                 <img src="files/sightsee_2.png" class="content">
             </div>
             <div class="onoff">
-                <div class="on">▲</div>
+                <div class="on" onclick="on()">▲</div>
                 <br>
-                <div class="off">▼</div>
+                <div class="off"onclick="off()">▼</div>
             </div>
         </section>
     </body>
