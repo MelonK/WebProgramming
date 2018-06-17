@@ -36,8 +36,8 @@ ul ul li {float: none;}
 td {overflow: visible;}
 p {margin: 0% 20% 0% 20%;}
 a {text-decoration: none;}
-.box7 {margin: 0% 20% 0% 40%;}
-.box6 { margin: 0% 0% 0% 35%;}
+.box7 {margin: 0% 20% 0% 30%; font-size: 20px;}
+.box6 { margin: 0% 0% 0% 35%; font-size: 20px;}
 .his {margin: 0% 20% 0% 40%}
 body {background-image: url('사진/배경용3.jpg'); background-size: 100%;}
 .box1 {font: bolder; font-size: 30px;}
