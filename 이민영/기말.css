@@ -34,3 +34,11 @@ ul li:hover ul {display: block;}
 ul ul li {float: none;}
 #종류 ul {float: none;}
 td {overflow: visible;}
+p {margin: 0% 20% 0% 20%;}
+a {text-decoration: none;}
+.box7 {margin: 0% 20% 0% 40%;}
+.box6 { margin: 0% 0% 0% 35%;}
+.his {margin: 0% 20% 0% 40%}
+body {background-image: url('사진/배경용3.jpg'); background-size: 100%;}
+.box1 {font: bolder; font-size: 30px;}
+.box2 {font-size: 25px;}
