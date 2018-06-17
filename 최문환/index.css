@@ -1,0 +1,46 @@
+﻿            .box {
+                display: none;
+            }
+
+            img {
+                position: absolute;
+                top: 15px;
+            }
+
+            * {
+                padding: 0;
+                margin: 0;
+                border: 0;
+            }
+
+            .header_group,
+            .menu {
+                width: 1000px;
+                height: 77px;
+                margin: 0 auto;
+                position: relative;
+            }
+
+            .bar {
+                width: 100%;
+                position: relative;
+                height: 50px;
+                background-color: rgb(34, 149, 202);
+                text-align: left;
+                z-index: 5;
+            }
+
+            .menu ul li {
+                display: inline-block;
+                font-size: 15px;
+                font-family: "맑은 고딕";
+                font-weight: bold;
+                text-align: left;
+                list-style-type: none;
+                padding: 15px 140px 0px 0px;
+            }
+
+            .menu ul li a {
+                text-decoration: none;
+                color: white;
+            }
