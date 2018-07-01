@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="devil01.css">
+  
+  <title>ABOUT</title>
+  
+  <style type="text/css">
+       @media all and (max-width: 1920px) {
+        .quick_menu {display: none;}
+      }
+html{  
+	font-family: 'Ubuntu';
+}
+
+	@import url('https://fonts.googleapis.com/css?family=Raleway:200');
+body {
+ 	font-family: 'Raleway', sans-serif;
+ 	background-image: url(003.png);
+	background-size: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: right bottom;
+}
+table, td {background-color: transparent;} 
+
+.wrapper {
+  position: absolute;
+  top: 10%;
+  left: 40%;
+  width: 300px;
+  height: 500px;
+  perspective: 900px;
+}
+
+.container {
+  position: absolute;
+  top: 0%;
+  width: 100%;
+  height: 100%;
+  transition: .5s all ease;
+  transform: rotateX(60deg) scale(0.7);
+  perspective: 900px;
+  box-shadow: 0px 20px 50px #555;
+  animation: entry 1s linear 1;
+}
+.icon {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+}
+.icon img {
+  position: absolute; top: 0; left: 0;
+  width: 100%;
+  height:100%;
+  opacity: 0.8;
+  filter: alpha(opacity=80);
+
+}
+
+#c0 {
+  position: absolute;
+  top: 0%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, #eba65b 30%, #d99267 100%);
+  z-index: 300;
+  box-shadow: 0px 20px 100px #555;
+}
+
+#c1 {
+  background: linear-gradient(to bottom, #59476f 30%, #7b88d1 100%);
+  box-shadow: 0px 20px 100px #555;
+  left: 100%;
+  z-index: 0;
+}
+
+#c2 {
+  left: -100%;
+  z-index: 0;
+  background: linear-gradient(to bottom, #59476f 30%, #7b88d1 100%);
+  box-shadow: 0px 20px 100px #555;
+}
+
+.container:hover {
+  cursor: pointer;
+  transform: rotate(0deg) scale(1) translateY(10px);
+  transition: .5s all ease;
+  z-index: 400;
+}
+
+.image {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 45%;
+  background: linear-gradient(to top, #eba65b 30%, #d99267 100%);
+}
+
+#i1 {
+  background: linear-gradient(to bottom, #59476f 30%, #7b88d1 100%);
+}
+
+#i2 {
+  background: linear-gradient(to bottom, #59476f 30%, #7b88d1 100%);
+}
+
+span {
+  position: absolute;
+  top: 0%;
+  left: 55%;
+  border-radius: 100%;
+  background-color: #fff;
+  z-index: 10;
+}
+
+
+.st7 {
+  fill: #fff;
+}
+
+#sh3 {
+  opacity: 0.3;
+}
+
+#sh1 {
+  fill: #f8c56f;
+  opacity: 0.4;
+}
+
+.st0 {
+  fill: #a25a62;
+  stroke: none;
+  stroke-miterlimit: 10;
+}
+
+.st1 {
+  fill: none;
+  stroke: #a25a62;
+  stroke-width: 2;
+  stroke-miterlimit: 10;
+}
+
+.st2 {
+  fill: #cd775c;
+}
+
+.st3 {
+  fill: #fff;
+  opacity: 0.3;
+}
+
+.story {
+  position: absolute;
+  top: 45%;
+  left: 0%;
+  height: 55%;
+  width: 100%;
+  background: linear-gradient(to bottom, #eba65b 0%, #d99267 40%);
+  z-index: 30;
+}
+
+#s1 {
+  background: linear-gradient(to top, #5b62a2 0%, #7b88d1 100%);
+}
+
+#s2 {
+  background: linear-gradient(to top, #5b62a2 0%, #7b88d1 120%);
+}
+
+.info {
+  position: absolute;
+  top: 10%;
+}
+
+
+.h3 {
+  text-align: center;
+  text-shadow: 0px 0px 10px #eee;
+  color: #eee;
+  letter-spacing: 2px;
+}
+
+.h4 {
+  color: #111;
+  position: absolute;
+  top: 30%;
+  left: 30%;
+  letter-spacing: 2px;
+}
+
+.h1 {
+  
+  position: fixed;
+
+  left: 7%;
+  
+}
+
+.p1 {
+  font-size: 14px;
+  color: #fff;
+  padding: 0px 20px 20px 20px;
+  line-height: 150%;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+.page {
+  color: #EAEAEA;
+  position: absolute;
+  top: 80%;
+  width: 100%;
+  left: 0%;
+  height: 20%;
+  z-index: 30;
+}
+
+.li1 {
+  position: absolute;
+  top: 50%;
+  list-style: none;
+  color: #EAEAEA;
+}
+
+.li1:nth-child(1) {
+  left: 15%;
+  animation: simple1 1s linear infinite;
+}
+
+.li1:nth-child(2) {
+  right: 15%;
+  animation: simple 1s linear infinite;
+}
+
+@keyframes simple {
+  50% {
+    transform: translateX(10px);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateX(10px);
+    opacity: 0;
+  }
+}
+
+@keyframes simple1 {
+  50% {
+    transform: translateX(-10px);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateX(-10px);
+    opacity: 0;
+  }
+}
+
+@keyframes entry {
+  0% {
+    top: -20%;
+    opacity: 0.1;
+  }
+  100% {
+    top: 0%;
+  }
+}
+
+/*
+* demo
+*/
+
+@media screen and (min-width: 769px){
+
+  html{
+    font-size: 62.5%;
+  }
+}
+
+@media screen and (min-width: 641px) and (max-width: 768px){
+
+  html{
+    font-size: 56%;
+  }
+}
+
+@media screen and (max-width: 640px){
+
+  html{
+    font-size: 50%;
+  }
+}
+
+body{
+  font-family: Ubuntu, sans-serif;
+  font-size: 1.6rem;
+  color: #222;
+
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-overflow-scrolling: touch;
+}
+
+a{
+  text-decoration: none;
+  color: #795406;
+}
+
+.title{
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  margin: 0;
+  background-color: #fff;
+  padding: .5rem 1.5rem;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+/*
+* menu
+*/
+  .menubar{
+border:none;
+border:0px;
+margin:0px;
+padding:0px;
+font: 67.5% "Lucida Sans Unicode", "Bitstream Vera Sans", "Trebuchet Unicode MS", "Lucida Grande", Verdana, Helvetica, sans-serif;
+font-size:14px;
+font-weight:bold;
+}
+
+.menubar ul{
+background-color: rgb(0,0,0);
+height:50px;
+list-style:none;
+margin:0;
+padding:0;
+}
+
+.menubar li{
+float:left;
+padding:0px;
+}
+
+.menubar li a{
+background-color: rgb(0,0,0);
+color:#cccccc;
+display:block;
+font-weight:normal;
+line-height:50px;
+margin:0px;
+padding:0px 25px;
+text-align:center;
+text-decoration:none;
+}
+
+.menubar li a:hover, .menubar ul li:hover a{
+background-color: rgb(0,0,0);
+color:#FFFFFF;
+text-decoration:none;
+}
+
+.menubar li ul{
+background: rgb(0,0,0);
+display:none; /* 평상시에는 드랍메뉴가 안보이게 하기 */
+height:auto;
+padding:0px;
+margin:0px;
+border:0px;
+position:absolute;
+width:200px;
+z-index:200;
+/*top:1em;
+/*left:0;*/
+}
+.menubar li:hover ul{
+display:block; /* 마우스 커서 올리면 드랍메뉴 보이게 하기 */
+}
+
+.menubar li li {
+background: rgb(0,0,0);
+display:block;
+float:none;
+margin:0px;
+padding:0px;
+width:200px;
+}
+
+.menubar li:hover li a{
+background:none;
+}
+.menubar li ul a{
+display:block;
+height:50px;
+font-size:12px;
+font-style:normal;
+margin:0px;
+padding:0px 10px 0px 15px;
+text-align:left;
+}
+
+.menubar li ul a:hover, .menubar li ul li:hover a{
+background: rgb(71,71,71);
+border:0px;
+color:#ffffff;
+text-decoration:none;
+}
+
+.menubar p{
+clear:left;
+}
+
+.fixed {
+  position: fixed;
+  bottom: 0;
+  left:0;
+  width: 100%;
+  height: 50px;
+  background-color: black;
+color: black;
+}
+img.platform {
+  position: fixed;
+  bottom: 2;
+  right: 0;
+
+}
+.fixed p{
+clear:right;
+}
+
+  </style>
+ 
+</head>
+
+<body translate="no" >
+<audio src="Daniel Lanois-Fire.mp3" autoplay></audio>
+<div class="menubar">
+    <ul>
+      <li><a href="Little Devil Inside(2).html">Home</a></li>
+      <li><a href="ABOUT.html">About</a></li> 
+      <li><a href="PHOTO.html">Photo</a></li>
+      <li><a href="ACTION.html">Action</a></li>
+      <li><a href="#" id="current">Site</a>
+      	<ul>
+      		<li><a href="https://www.facebook.com/projectldi/" target="_blank">Facebook</a></li>
+      		<li><a href="https://twitter.com/projectldi" target="_blank">Twitter</a></li>
+      		<li><a a href="https://www.kickstarter.com/projects/ldi/little-devil-inside" target="_blank">Kickstarter</a></li>
+      		<li><a href="https://www.youtube.com/channel/UCDnSzQY6b5uD1Sfk08EYbBw" target="_blank">Youtube</a></li>
+      		<li><a href="http://www.neostream.com/#none" target="_blank">Production Company</a></li>
+      	</ul>
+      </li>
+    </ul>
+</div>
+<section>
+	<h1 class="h1">About</h1>
+	<article>
+<div class="wrapper">
+
+	<div class="container" id="c0">
+		<div class="image" id="i0">
+			
+			<div class="city">
+			<?xml version="1.0" encoding="utf-8"?>
+      <div class="icon"><img src="map.png" alt="map.png"></div>
+			<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 	viewBox="0 0 300 225" style="enable-background:new 0 0 300 225;" xml:space="preserve">
+			
+			<circle id="XMLID_10_" class="st3" cx="87.5" cy="98.5" r="1.5"/>
+			<circle id="XMLID_11_" class="st3" cx="24.5" cy="68.5" r="2.5"/>
+			<circle id="XMLID_12_" class="st3" cx="219.5" cy="18.5" r="1.5"/>
+			<circle id="XMLID_13_" class="st3" cx="272.5" cy="03.5" r="2.0"/>
+			<circle id="XMLID_14_" class="st3" cx="144.5" cy="12.5" r="1.0"/>
+			<circle id="XMLID_10_" class="st3" cx="107.5" cy="328.5" r="1.5"/>
+			<circle id="XMLID_11_" class="st3" cx="24.5" cy="58.5" r="2.5"/>
+			<circle id="XMLID_12_" class="st3" cx="19.5" cy="128.5" r="1.5"/>
+			<circle id="XMLID_13_" class="st3" cx="72.5" cy="113.5" r="2.0"/>
+			<circle id="XMLID_14_" class="st3" cx="174.5" cy="92.5" r="1.0"/>
+
+			</svg>
+			</div>
+		</div>
+		<div class="story" id="s0">
+			<div class="info">
+			<h3 class="h3">Explore,Survive</h3>
+			<p class="p1"> 세계를 탐험하세요. 일반 생존 게임이 아닙니다. 살아남기 위해 조사하고 적응하고 의식주를 해결하면 싸워나가야 합니다. </p>
+			</div>
+		</div>
+	</div>
+	
+  <div class="container" id="c1">
+		<div class="image" id="i1">
+			<div class="city">
+			<?xml version="1.0" encoding="utf-8"?>
+      <div class="icon"><img src="man.png" alt="man.png"></div>
+      <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+         viewBox="0 0 300 225" style="enable-background:new 0 0 300 225;" xml:space="preserve">
+      <circle id="XMLID_11_" class="st7" cx="24.5" cy="68.5" r="2.5"/>
+      <circle id="XMLID_12_" class="st7" cx="219.5" cy="28.5" r="1.5"/>
+      <circle id="XMLID_13_" class="st7" cx="272.5" cy="103.5" r="2.0"/>
+      <circle id="XMLID_14_" class="st7" cx="144.5" cy="92.5" r="1.0"/>
+
+      <circle id="XMLID_11_" class="st7" cx="4.5" cy="88.5" r="2.5"/>
+      <circle id="XMLID_12_" class="st7" cx="29.5" cy="38.5" r="1.5"/>
+      <circle id="XMLID_13_" class="st7" cx="222.5" cy="143.5" r="2.0"/>
+      <circle id="XMLID_14_" class="st7" cx="114.5" cy="42.5" r="1.0"/>
+
+      </svg>
+
+			</div>
+		</div>
+
+		<div class="story" id="s1">
+			<div class="info">
+				<h3 class="h3">Not Hero</h3>
+			<p class="p1"> 당신은 슈퍼 히어로가 아닙니다. 모험에서 살아남기 위해 적을 연구하세요. 더욱 강력한 기술을 준비하세요. 경험을 통해 당신을 계속 발전시키고 강해지세요.</p>
+			</div>
+		</div>
+	</div>
+	
+  <div class="container" id="c2">
+		<div class="image" id="i2">
+			<div class="city">
+			<?xml version="1.0" encoding="utf-8"?>
+      <div class="icon"><img src="hands.png" alt="hands.png"></div>
+			<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+				 viewBox="0 0 300 225" style="enable-background:new 0 0 300 225;" xml:space="preserve">
+			
+			<circle id="XMLID_11_" class="st7" cx="24.5" cy="68.5" r="2.5"/>
+			<circle id="XMLID_12_" class="st7" cx="119.5" cy="28.5" r="1.5"/>
+			<circle id="XMLID_13_" class="st7" cx="172.5" cy="103.5" r="2.0"/>
+			<circle id="XMLID_14_" class="st7" cx="244.5" cy="92.5" r="1.0"/>
+			<circle id="XMLID_11_" class="st7" cx="214.5" cy="18.5" r="2.5"/>
+			<circle id="XMLID_12_" class="st7" cx="119.5" cy="38.5" r="1.5"/>
+			<circle id="XMLID_13_" class="st7" cx="172.5" cy="203.5" r="2.0"/>
+			<circle id="XMLID_14_" class="st7" cx="144.5" cy="12.5" r="1.0"/>
+
+			</svg>
+
+			</div>
+		</div>
+    
+		<div class="story" id="s2">
+			<div class="info">
+			<h3 class="h3">Free Action</h3>
+			<p class="p1"> 자유로운 액션이 가능합니다. 은밀한 작업수행을 위한 몰래 움직이기, 매달리기 등이 가능합니다. 또한 당신은 음료 아이템을 먹다가 남길 수 있습니다.</p>
+
+			</div>
+		</div>
+	</div>
+
+	<div class="page">
+	<h4 class="h4" style="color: #EAEAEA">Hover the card</h4>
+	<ul class="ul1"><li class="li1"> <<< </li>
+
+	<li class="li1"> >>> </li>
+	</ul>
+	</div>
+
+</div>
+	</article>
+</section>
+<div class="fixed">
+		<p>fgs<img src="platform.png" class="platform" alt="platform"></p>
+</div>
+</body>
+
+</html>
+ 

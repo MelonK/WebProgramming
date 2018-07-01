@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="devil01.css">
+  
+  <title>Little Devil Inside(2)</title>
+  
+  <style>
+       @media all and (max-width: 1920px) {
+        .quick_menu {display: none;}
+      }
+html{  
+  font-family: 'Ubuntu';
+}
+body {
+	
+      	background-repeat: no-repeat;
+      	background-size: 100%;
+      	background-attachment: fixed;
+      	background-position: right bottom;}
+table, td {background-color: transparent;} 
+
+video.video {
+	position : fixed;
+	top : 0; 
+	left : 0;
+	min-width : 1024px;
+	min-height : auto;
+	width : 100%;
+	height : auto;
+	z-index : -1;
+}
+@media screen and (max-width: 1024px){
+video.video{
+	left:50%;
+	margin-left: -512
+}
+}
+/*
+* demo
+*/
+
+@media screen and (min-width: 769px){
+
+  html{
+    font-size: 62.5%;
+  }
+}
+
+@media screen and (min-width: 641px) and (max-width: 768px){
+
+  html{
+    font-size: 56%;
+  }
+}
+
+@media screen and (max-width: 640px){
+
+  html{
+    font-size: 50%;
+  }
+}
+
+body{
+  font-family: Ubuntu, sans-serif;
+  font-size: 1.6rem;
+  color: #222;
+
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-overflow-scrolling: touch;
+}
+
+a{
+  text-decoration: none;
+  color: #795406;
+}
+
+p{
+  width: 60%;
+}
+img.absolute{
+  position: fixed;
+  left:40%;
+  top:27%;
+  
+}
+
+
+.title{
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  margin: 0;
+  background-color: #fff;
+  padding: .5rem 1.5rem;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+/*
+* menu
+*/
+  .menubar{
+border:none;
+border:0px;
+margin:0px;
+padding:0px;
+font: 67.5% "Lucida Sans Unicode", "Bitstream Vera Sans", "Trebuchet Unicode MS", "Lucida Grande", Verdana, Helvetica, sans-serif;
+font-size:14px;
+font-weight:bold;
+}
+
+.menubar ul{
+background-color: rgb(0,0,0);
+height:50px;
+list-style:none;
+margin:0;
+padding:0;
+}
+
+.menubar li{
+float:left;
+padding:0px;
+}
+
+.menubar li a{
+background-color: rgb(0,0,0);
+color:#cccccc;
+display:block;
+font-weight:normal;
+line-height:50px;
+margin:0px;
+padding:0px 25px;
+text-align:center;
+text-decoration:none;
+}
+
+.menubar li a:hover, .menubar ul li:hover a{
+background-color: rgb(0,0,0);
+color:#FFFFFF;
+text-decoration:none;
+}
+
+.menubar li ul{
+background: rgb(0,0,0);
+display:none; /* 평상시에는 드랍메뉴가 안보이게 하기 */
+height:auto;
+padding:0px;
+margin:0px;
+border:0px;
+position:absolute;
+width:200px;
+z-index:200;
+/*top:1em;
+/*left:0;*/
+}
+.menubar li:hover ul{
+display:block; /* 마우스 커서 올리면 드랍메뉴 보이게 하기 */
+}
+
+.menubar li li {
+background: rgb(0,0,0);
+display:block;
+float:none;
+margin:0px;
+padding:0px;
+width:200px;
+}
+
+.menubar li:hover li a{
+background:none;
+}
+.menubar li ul a{
+display:block;
+height:50px;
+font-size:12px;
+font-style:normal;
+margin:0px;
+padding:0px 10px 0px 15px;
+text-align:left;
+}
+
+.menubar li ul a:hover, .menubar li ul li:hover a{
+background: rgb(71,71,71);
+border:0px;
+color:#ffffff;
+text-decoration:none;
+}
+
+.menubar p{
+clear:left;
+}
+
+.fixed {
+  position: fixed;
+  bottom: 0;
+  left:0;
+  width: 100%;
+  height: 50px;
+  background-color: black;
+color: black;
+}
+img.platform {
+  position: fixed;
+  bottom: 2;
+  right: 0;
+
+}
+.fixed p{
+clear:right;
+}
+
+  </style>
+ 
+</head>
+
+<body translate="no" >
+<video class="video" autoplay="true" loop="loop">
+		<source src = "LDI.mp4" type = "video/mp4">
+	</video>
+
+<nav>
+<div class="menubar">
+    <ul>
+      <li><a href="Little Devil Inside(2).html">Home</a></li>
+      <li><a href="ABOUT.html">About</a></li> 
+      <li><a href="PHOTO.html">Photo</a></li>
+       <li><a href="ACTION.html">Action</a></li>
+      <li><a href="#" id="current">Site</a>
+      	<ul>
+      		<li><a href="https://www.facebook.com/projectldi/" target="_blank">Facebook</a></li>
+      		<li><a href="https://twitter.com/projectldi" target="_blank">Twitter</a></li>
+      		<li><a a href="https://www.kickstarter.com/projects/ldi/little-devil-inside" target="_blank">Kickstarter</a></li>
+      		<li><a href="https://www.youtube.com/channel/UCDnSzQY6b5uD1Sfk08EYbBw" target="_blank">Youtube</a></li>
+      		<li><a href="http://www.neostream.com/#none" target="_blank">Production Company</a></li>
+      	</ul>
+      </li>
+    </ul>
+</div>
+<div>
+  <p>
+    <img src="영상로고2.png" width="300" class="absolute" alt="Little Devil Inside"></p>
+</div>
+<div class="fixed">
+		<p>fgs<img src="platform.png" class="platform" alt="platform"></p>
+</div>
+</body>
+
+</html>

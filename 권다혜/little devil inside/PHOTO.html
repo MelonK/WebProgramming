@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="devil01.css">
+  <meta http-equiv="X-UA-Compatiblee" content="IE=edge,chrome=1" /> 
+  <title>PHOTO</title>
+<link href="nd_slider.css" rel="stylesheet" type="text/css" media="all">
+<script src="jquery-1.8.0.min.js"></script>
+<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+<script src="nd_slider.js"></script> 
+
+  
+  <style>
+      @media all and (max-width: 1920px) {
+        .quick_menu {display: none;}
+      }
+html{  
+  font-family: 'Ubuntu';
+}
+body {background-image: url(004.png);
+      background-repeat: no-repeat;
+      background-size: 100%;
+      background-attachment: fixed;
+      background-position: right bottom;}
+table, td {background-color: transparent;} 
+
+/*
+* demo
+*/
+
+@media screen and (min-width: 769px){
+
+  html{
+    font-size: 62.5%;
+  }
+}
+
+@media screen and (min-width: 641px) and (max-width: 768px){
+
+  html{
+    font-size: 56%;
+  }
+}
+
+@media screen and (max-width: 640px){
+
+  html{
+    font-size: 50%;
+  }
+}
+
+body{
+  font-family: Ubuntu, sans-serif;
+  font-size: 1.6rem;
+  color: #222;
+
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-overflow-scrolling: touch;
+}
+
+a{
+  text-decoration: none;
+  color: #795406;
+}
+
+.title{
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  margin: 0;
+  background-color: #fff;
+  padding: .5rem 1.5rem;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.h1 {
+  
+  position: fixed;
+
+  left: 7%;
+  
+}
+/*
+* menu
+*/
+  .menubar{
+r
+border:none;
+border:0px;
+margin:0px;
+padding:0px;
+font: 67.5% "Lucida Sans Unicode", "Bitstream Vera Sans", "Trebuchet Unicode MS", "Lucida Grande", Verdana, Helvetica, sans-serif;
+font-size:14px;
+font-weight:bold;
+}
+
+.menubar ul{
+background-color: rgb(0,0,0);
+height:50px;
+list-style:none;
+margin:0;
+padding:0;
+}
+
+.menubar li{
+float:left;
+padding:0px;
+}
+
+.menubar li a{
+background-color: rgb(0,0,0);
+color:#cccccc;
+display:block;
+font-weight:normal;
+line-height:50px;
+margin:0px;
+padding:0px 25px;
+text-align:center;
+text-decoration:none;
+}
+
+.menubar li a:hover, .menubar ul li:hover a{
+background-color: rgb(0,0,0);
+color:#FFFFFF;
+text-decoration:none;
+}
+
+.menubar li ul{
+background: rgb(0,0,0);
+display:none; /* 평상시에는 드랍메뉴가 안보이게 하기 */
+height:auto;
+padding:0px;
+margin:0px;
+border:0px;
+position:absolute;
+width:200px;
+z-index:200;
+/*top:1em;
+/*left:0;*/
+}
+.menubar li:hover ul{
+display:block; /* 마우스 커서 올리면 드랍메뉴 보이게 하기 */
+}
+
+.menubar li li {
+background: rgb(0,0,0);
+display:block;
+float:none;
+margin:0px;
+padding:0px;
+width:200px;
+}
+
+.menubar li:hover li a{
+background:none;
+}
+.menubar li ul a{
+display:block;
+height:50px;
+font-size:12px;
+font-style:normal;
+margin:0px;
+padding:0px 10px 0px 15px;
+text-align:left;
+}
+
+.menubar li ul a:hover, .menubar li ul li:hover a{
+background: rgb(71,71,71);
+border:0px;
+color:#ffffff;
+text-decoration:none;
+}
+
+.menubar p{
+clear:left;
+}
+
+.fixed {
+  position: fixed;
+  bottom: 0;
+  left:0;
+  width: 100%;
+  height: 50px;
+  background-color: black;
+color: black;
+}
+img.platform {
+  position: fixed;
+  bottom: 2;
+  right: 0;
+
+}
+.fixed p{
+clear:right;
+}
+
+  </style>
+ 
+</head>
+
+<body translate="no" >
+<audio src="Daniel Lanois-Fire.mp3" autoplay></audio> 
+<div class="menubar" style="position: relative; z-index: 2">
+    <ul>
+      <li><a href="Little Devil Inside(2).html">Home</a></li>
+      <li><a href="ABOUT.html">About</a></li> 
+      <li><a href="PHOTO.html">Photo</a></li>
+      <li><a href="ACTION.html">Action</a></li>
+      <li><a href="#" id="current">Site</a>
+        <ul>
+          <li><a href="https://www.facebook.com/projectldi/" target="_blank">Facebook</a></li>
+          <li><a href="https://twitter.com/projectldi" target="_blank">Twitter</a></li>
+          <li><a a href="https://www.kickstarter.com/projects/ldi/little-devil-inside" target="_blank">Kickstarter</a></li>
+          <li><a href="https://www.youtube.com/channel/UCDnSzQY6b5uD1Sfk08EYbBw" target="_blank">Youtube</a></li>
+          <li><a href="http://www.neostream.com/#none" target="_blank">Production Company</a></li>
+        </ul>
+      </li>
+    </ul>
+</div>
+
+  <article>
+    <h1 class="h1">Photo</h1>
+  </article>
+  <p><br>
+      <br></p>
+  <article>
+    <div class="wrap_box" style="position: relative; z-index: 1">
+   <div class="visual">
+    <div class="box"> 
+          <img src="img/img01.png" class="pht ">
+              <img src="img/img02.png" class="pht dn">  
+              <img src="img/img03.png" class="pht dn">
+            <img src="img/img04.png" class="pht dn">  
+              <img src="img/img05.png" class="pht dn">        
+        <img src="img/main_visual_prev.png" alt="" class="prev">
+        <img src="img/main_visual_next.png" alt="" class="next">
+
+        <ul class="control clear"> <!-- page nav -->
+          <li class="fl"><img src="img/main_visual_control_on.png" alt=""></li>
+          <li class="fl"><img src="img/main_visual_control.png" alt=""></li>
+          <li class="fl"><img src="img/main_visual_control.png" alt=""></li>
+          <li class="fl"><img src="img/main_visual_control.png" alt=""></li>
+          <li class="fl"><img src="img/main_visual_control.png" alt=""></li>
+        </ul>
+
+        <div class="thumbox clear"> <!-- right box -->
+                  <!-- mouse leave -->
+          <ul class="listbox" style="padding-top:0">
+                      <li class="ll"><img src="img/img_s01.png"></li>
+                    <li class="ll"><img src="img/img_s02.png"></li>
+            <li class="ll"><img src="img/img_s03.png"></li>
+            <li class="ll"><img src="img/img_s04.png"></li>
+            <li class="ll"><img src="img/img_s05.png"></li>
+
+          </ul>    
+                  <!-- mouse enter -->
+          <ul class="listbox2">
+                    <li class="li_o1"><img src="img/img_s01_on.png"></a></li>
+            <li class="li_o2"><img src="img/img_s02_on.png"></a></li>
+            <li class="li_o3"><img src="img/img_s03_on.png"></a></li>
+            <li class="li_o4"><img src="img/img_s04_on.png"></a></li>
+            <li class="li_o5"><img src="img/img_s05_on.png"></a></li>
+          </ul>
+        </div>
+
+          </div><!-- box -->
+      </div><!-- visual -->
+  </div><!-- wrap_box -->
+  </article>
+
+<div class="fixed">
+    <p>fgs<img src="platform.png" class="platform" alt="platform"></p>
+</div>
+</body>
+
+</html>
+ 
