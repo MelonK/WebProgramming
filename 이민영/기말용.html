@@ -1,12 +1,235 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="kr">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link rel="stylesheet" href="기말.css" type="text/css">
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.box1').show();
+            $('.item1').click(function () {
+                $('.box1').show('active');
+                $('.box2').hide('active');
+                $('.box3').hide('active');
+                $('.box4').hide('active');
+                $('.box5').hide('active');
+                $('.box6').hide('active');
+                $('.box7').hide('active');
+            })
+            $('.item2').click(function () {
+                $('.box1').hide('active');
+                $('.box2').toggle('active');
+                $('.box3').hide('active');
+                $('.box4').hide('active');
+                $('.box5').hide('active');
+                $('.box6').hide('active');
+                $('.box7').hide('active');
+            })
+            $('.item3').click(function () {
+                $('.box1').hide('active');
+                $('.box2').hide('active');
+                $('.box3').toggle('active');
+                $('.box4').hide('active');
+                $('.box5').hide('active');
+                $('.box6').hide('active');
+                $('.box7').hide('active');
+            })
+            $('.item4').click(function () {
+                $('.box1').hide('active');
+                $('.box2').hide('active');
+                $('.box3').hide('active');
+                $('.box4').toggle('active');
+                $('.box5').hide('active');
+                $('.box6').hide('active');
+                $('.box7').hide('active');
+            })
+            $('.item6').click(function () {
+                $('.box1').hide('active');
+                $('.box2').hide('active');
+                $('.box3').hide('active');
+                $('.box4').hide('active');
+                $('.box5').hide('active');
+                $('.box6').toggle('active');
+                $('.box7').hide('active');
+            })
+            $('.item7').click(function () {
+                $('.box1').hide('active');
+                $('.box2').hide('active');
+                $('.box3').hide('active');
+                $('.box4').hide('active');
+                $('.box5').hide('active');
+                $('.box6').hide('active');
+                $('.box7').toggle('active');
+            })
+        })
+    </script>
+    <script>
+        var imgs = [
+         '사진/디스크.png',
+         '사진/하드.jpg',   
+         '사진/구름.jpg',  
+         '사진/바이오.jpg'
+        ]
+        var count = 0
+        setInterval(function() {
+            if(count==imgs.length) { count = 0;}
+            document.getElementById('myImg').src = imgs[count++]; 
+        }, 3000); 
+    </script>
 </head>
+
 <body>
-    
-</body>
+    <h2>
+        <img src="사진/방패.png" width="70" height="70">Antivirus</h2>
+    <div class="bar">
+        <div class="bar2">
+    <ul class="menu" id="메뉴판">
+        <li class="item1"><a href="#">HOME</a></li>
+        <li class="item2"><a href="#">역사</a></li>
+        <li class="item3"><a href="#">기능</a></li>
+        <li class="item4"><a href="#">종류</a></li>
+        <li class="item5"><a href="#">기타</a><ul>
+        <il class="item6"><a href="#">설문</a></il><br>
+        <il><a href="https://www.av-test.org/en/antivirus/home-windows/" target="_blank">백신표</a></il><br>
+        <il class="item7"><a href="#">출처</a></il>
+    </ul></li>
+    </ul>
+        </div>
+    </div>     
+   <div class="box box1"><p><strong>수많은 외부에 의한 공격속에서 당신의 정보를 지켜주는것은 바로 "안티바이러스 소프트웨어!"
+       여러 안티바이러스 소프트웨어에 대해알아보고 역사와 기능, 종류를 소개해드리곘습니다!
+       우리가 쓰는 안티바이러스 소프트웨어는 어떤 것인지 또 어떤기능을 하고 무엇이 있는지 또 각 프로그램의 성능 어떠한지 알아보겠습니다!</strong></p></div>
+   <div class="box box2"><p><img src="사진/디스크.png" id="myImg" width="150" height="150" class="his"><br><strong>
+        첫 백신 프로그램이 무엇인가는 확실하지 않습니다. 다만 처음으로 문서화된 컴퓨터 바이러스 제거 프로그램은 1987년 발표된 번트 픽스(Bernd Fix)인 것으로 알려져 있습니다.
+        이후에도 첫 개인용 컴퓨터 바이러스인 브레인 바이러스를 제거하는 목적으로 제작된 현 V3에 시초라 부르는 V1이 등장하고 이때 배포할 당시 이름인 Vaccine.com으로 인해 
+        국내에 백신 프로그램이라는 것이 안티바이러스프로그램 단어로서 보편화된 것입니다.
+        이후 플로피디스크에서만 퍼지던 바이러스들이 인터넷에 발달로 점차 쉽고 빠르게 퍼져가면서 이를 막기 위한 안티바이러스 소프트웨어도 
+        발전하고 널리 퍼졌습니다. 이후 많은 백신 프로그램들이 등장하고 이후 바이러스뿐만 아니라 해커에 공격에 대응하며 실시간 감시, 웹 감시, 방화벽 등 많은 기능이 추가되었습니다.</strong></p>
+   </div>
+   <div class="box box3">
+       <ul>
+           <li>악성코드 검사<br>
+            가장 대표적인 기능으로 컴퓨터에 감염된 악성코드, 바이러스를 검사하고 제거하는 역할을합니다.
+            악성코드들은 변종이 쉽게 만들어지고 또 백신을 무력화시키기위해 발전해가는데 이를 막기위해 백신역시
+            자동업데이트기능을 가지고있으며 현재는 수많은 바이러스들을 막기위해 각국 보안업체가 서로 바이러스패턴을
+            공유하면서 악성코드를 막기위해 노력하고있습니다.
+           </li>
+           <li>실시간 감시<br>
+            실시간 감시는 사용자가 작업을 하고있는 동안에도 감시를 통해 바이러스나 해커에 공격에 대비하고 대응하는 일을 말합니다.
+            실시간 검사중에서는 웹감시, 메일감시, usb감시가 있으며 사용자가 사용하는 즉시 검사해 위험성을 판단합니다.
+           </li>
+           <li>추가기능<br>
+           백신에 따라 상이하기는 하지만 여러가지 기능들을 제공하는데 방화벽, 샌드박스기능, PC최적화, 가짜 웹 감시등
+           예전에 없던 편의기능을 제공하면서 사용자편의를 증진시키고있습니다.
+           </li>
+           
+       </ul>
+   </div>
+   <div class="box box4">
+       <ul id="종류">
+           <li>한국
+             <table border="5">
+              <tbody>
+               <tr>
+                   <td><img src="사진/v3.jpg" width="200px" height="200px"></td>
+                   <td>V3<br>안랩에서 제작한 국내순수 안티바이러스 소프트웨어.
+                    한국에서 백신이 안티바이러스 소프트웨어와 같은 뜻으로 불리게 할 정도로 영향력 있었습니다.
+                    기존 해외 엔진을 사용하던 국내 백신과 달리 자제개발 엔진으로 제작된 최초의 국산 백신입니다.
+                    현재까지도 많은 사람이 이용하고 있으며 과거 오진과 오류로 실추된 명성을 백신 성능검사에서
+                    당당히 순위권에 들으며 명예를 되찾고 있습니다. 현재 가볍고 뛰어난 성능을 자랑합니다.
+                    V3란 이름은 초기 V1에서 V2 그리고 V3가 된 것인데 V3가 인지도와 인기가 높아 V3란 이름으로 브랜드명이 정해진 것입니다.</td>
+               </tr>
+               <tr>
+                   <td><img src="사진/알약.jpg" width="200px" height="200px"></td>
+                   <td>알약<br>이스트 시큐리티가 개발, 배포하는 국내 안티바이러스 소프트웨어.
+                    알약은 루마니아의 백신 '비트디펜터'에 바이러스 엔진과 자체개발한 테라 엔진을 합쳐 제작된 백신입니다.
+                    많은 오진과 부족한 기술력 과도한 광고로 비판받고 있지만, 국내에서는 V3와 나란히 높은 점유율을
+                    차지하고 있는 백신입니다. 국내 모바일 백신 점유율에서는 1위를 차지할 정도로 비판에 비교해 높은 인기를 보입니다.</td>
+               </tr>
+              </tbody>
+             </table>  
+           </li>
+           <li>외국
+             <table border="5">
+                <tr>
+                    <td><img src="사진/avast.jpg" width="200px" height="200px"></td>
+                    <td>AVAST<br>체코에 있는 Avast Software에서 제작한 안티바이러스 소프트웨어.
+                        국내에서는 어베스트라고 불리고 있으며 여러 가지 많은 기능과 가벼우면서도 높은 성능을
+                        자랑하면서 전 세계 백신 점유율 1위를 차지하고 있을 정도로 큰 인기가 있습니다. 다만 국내에서는
+                        낮은 인지도와 사후관리 및 서비스 등에 불편으로 인해 낮은 점유율을 보이고 있습니다.</td> 
+                </tr>
+                <tr>
+                    <td><img src="사진/ESET.jpg" width="200px" height="200px"></td>
+                    <td>ESET<br>슬로바키아의 소프트웨어 회사이자 여기서 제작된 안티바이러스 소프트웨어.
+                        준수한 성능과 가벼운 시스템 점유율 업계 최저 수준의 오진율을 자랑하며 유료 백신 부분에서
+                        점유율 1위를 차지하는 백신입니다. 국내에서는 크게 인지도가 없지만, 해외에서는 높은 인기를 자랑하고
+                        또 VB100이라 불리는 테스트에서 세계최초로 100회 인증을 받으면서 성능, 안정성에서 그 누구에게 뒤지지 않음을 보였습니다.</td>
+                </tr>
+             </table>
+           </li>   
+       </ul>
+   </div>
+   <div class="box box6">
+       <form>
+           <br>
+           사용중인 백신프로그램
+           <input type="radio" name="vac" value="10">V3
+           <input type="radio" name="vac" value="1">알약
+           <input type="radio" name="vac" value="2">네이버백신
+           <input type="radio" name="vac" value="3">AVAST
+           <input type="radio" name="vac" value="4">기타<textarea name="n" cols="10" rows="1" placeholder="백신"></textarea>
+           <br>
+           <br>
+           만족도
+           <input type="radio" name="saf" value="5">매우 만족
+           <input type="radio" name="saf" value="6">만족
+           <input type="radio" name="saf" value="7">보통
+           <input type="radio" name="saf" value="8">불만족
+           <input type="radio" name="saf" value="9">매우 불만족
+           <br>
+           <br>
+           마음에 드는 기능
+           <input type="radio" name="fu" value="11">실시간 감시
+           <input type="radio" name="fu" value="12">방화벽
+           <input type="radio" name="fu" value="13">pc최적화
+           <input type="radio" name="fu" value="14">기타<textarea name="p" cols="10" rows="1" placeholder="기능"></textarea>
+           <br>
+           <br>
+           <button type="button" onclick="alert('감사합니다!')">제출</button>
+       </form>
+   </div>
+   <div class="box box7">
+    <br>
+    <a href="https://metadefender.opswat.com/reports/anti-malware-market-share#!/" target="_blank">해외점유율</a><br>
+    <a href="http://www.zdnet.co.kr/news/news_view.asp?artice_id=20180518171531&type=det&re=" target="_blank">알약</a>
+    <br>
+    <details>
+     <br>
+     <summary>사진 출처</summary>
+     <a href="https://pixabay.com/ko/%EB%B3%B4%ED%98%B8-%EC%95%88%ED%8B%B0-%EB%B0%94%EC%9D%B4%EB%9F%AC%EC%8A%A4-%EB%B0%A9%ED%99%94%EB%B2%BD-%EC%B0%BD%EB%AC%B8-%EB%B0%A9%ED%8C%A8-%EB%B0%A9%EC%96%B4-%EC%A0%9C%ED%95%9C-%EC%97%86%EC%9D%8C-152531/" target="_blank">맨위 방패</a>
+     <a href="https://post.naver.com/viewer/postView.nhn?volumeNo=8812972&memberNo=21998290" target="_blank">디스크</a>
+     <a href="https://post.naver.com/viewer/postView.nhn?volumeNo=12290349&memberNo=40808275" target="_blank">하드</a>
+     <a href="https://blog.naver.com/insidecloud/130174155675" target="_blank">구름</a>
+     <a href="https://www.emergingedtech.com/2016/06/the-magic-of-biometric-eye-tracking-in-education/" target="_blank">바이오</a>
+     <a href="https://www.estsecurity.com/" target="_blank">알약</a>
+     <a href="http://www.ahnlab.com/kr/site/main.do" target="_blank">V3</a>
+     <a href="http://www.avastkorea.com/" target="_blank">AVAST</a>
+     <a href="https://www.eset.com/us/" target="_blank">ESET</a>  
+     <a href="https://ko.depositphotos.com/39558841/stock-illustration-abstract-network-design.html" target="_blank">배경</a>
+    </details>
+    <br>
+    <details>
+    <br>
+    <summary>정보 인용,도움 출처</summary>
+    <a href="https://ko.wikipedia.org/wiki/%EB%B0%94%EC%9D%B4%EB%9F%AC%EC%8A%A4_%EA%B2%80%EC%82%AC_%EC%86%8C%ED%94%84%ED%8A%B8%EC%9B%A8%EC%96%B4" target="_blank">역사</a>
+    <a href="https://ko.wikipedia.org/wiki/%EB%B0%94%EC%9D%B4%EB%9F%AC%EC%8A%A4_%EA%B2%80%EC%82%AC_%EC%86%8C%ED%94%84%ED%8A%B8%EC%9B%A8%EC%96%B4" target="_blank">기능</a>
+    <a href="https://namu.wiki/w/V3(%EB%B0%B1%EC%8B%A0)" target="_blank">V3</a>
+    <a href="https://namu.wiki/w/%EC%95%8C%EC%95%BD(%EB%B0%B1%EC%8B%A0)" target="_blank">알약</a>
+    <a href="https://namu.wiki/w/%EC%96%B4%EB%B2%A0%EC%8A%A4%ED%8A%B8?from=avast" target="_blank">AVAST</a>
+    <a href="https://namu.wiki/w/ESET" target="_blank">ESET</a>
+    </details>
+   </div>
+        </body>
 </html>

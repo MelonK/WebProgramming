@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<FONT face="맑은 고딕">
+    <meta charset="utf-8">
+    <title>경주 투어</title>
+    <link rel="stylesheet" href="index.css" type="text/css">
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script>
+        $(window).resize(getLoad);
+        function getLoad() {
+            var h = $(window).height() - 127;
+            //document.getElementById('getA').style.maxHeight = h;
+            document.getElementById("getA").style.maxHeight = h + "px";
+            document.getElementById("getA").style.height = h + "px";
+            //  document.body.style.zoom = "75%";
+        }
+    </script>
+    <style>
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .getL {
+            position: relative;
+            margin: 0 auto;
+            width: 1000px;
+        }
+
+        #getA {
+            padding-top: 10px;
+            overflow-y: scroll;
+            position: relative;
+            width: 300px;
+        }
+
+        #getA li {
+            list-style-type: none;
+            border-bottom: 1px solid #d8d8d8;
+        }
+
+        .getB {
+            cursor: pointer;
+            padding-top: 15px;
+            height: 200px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .getB:hover {
+            background-color: #f1f1f1;
+        }
+
+        .getB_Name {
+            font-size: 15px;
+            font-weight: bold;
+        }
+
+        .getB_Ex {
+            width: 135px;
+            display: inline-block;
+            margin-right: 20px;
+            vertical-align: top;
+
+        }
+
+        .getB_what {
+            font-size: 14px;
+            text-decoration-color: #383838;
+            line-height: 20px;
+            line-break: unset;
+            max-height: 120px;
+            overflow: hidden;
+        }
+
+        .getB img {
+
+            height: 150px;
+            width: 120px;
+            vertical-align: middle;
+        }
+    </style>
+    </head>
+
+    <body onload="getLoad()">
+        <header>
+            <div class="header_group">
+                <a href="index.html">
+                    <img src="files/banner.png">
+                </a>
+            </div>
+            <div class="bar">
+                <div class="menu" style="height:50px; overflow:hidden;">
+                    <ul>
+                        <li>
+                            <a href="sightsee.html">관광지</a>
+                        </li>
+                        <li>
+                            <a href="eating.html">맛집</a>
+                        </li>
+                        <li>
+                            <a href="theme.html">테마 여행</a>
+                        </li>
+                        <li>
+                            <a href="sleep.html">숙소</a>
+                        </li>
+                        <li>
+                            <a href="review.html">관광객 리뷰</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </header>
+        <section>
+            <div class="getL">
+                <div id="getA">
+                    <ul>
+                        <li>
+                            <div class="getB">
+                                <div class="getB_Ex">
+                                    <div class="getB_Name">국립경주박물관</div>
+                                    <br>
+                                    <p class="getB_what">국립경주박물관은 광복 직후인 1945년 국립박물관 경주분관으로 출범하였습니다.</p>
+                                </div>
+                                <img src="files/sightsee_menu_1.jpg" alt="">
+                            </div>
+                        </li>
+                        <li>
+                            <div class="getB">
+                                <div class="getB_Ex">
+                                    <div class="getB_Name">동궁과 월지</div>
+                                    <br>
+                                    <p class="getB_what"> 경주 동궁과 월지는 신라 왕궁의 별궁터이다. 다른 부속건물들과 함께 왕자가 거처하는 동궁으로 사용되면서, 나라의 경사가 있을 때나 귀한 손님을 맞을 때
+                                        이곳에서 연회를 베풀었다고 한다.</p>
+                                </div>
+                                <img src="files/sightsee_menu_2.png" alt="">
+                            </div>
+                        </li>
+                        <li>
+                            <div class="getB">
+                                <div class="getB_Ex">
+                                    <div class="getB_Name">불국사</div>
+                                    <br>
+                                    <p class="getB_what"> 경상북도 경주시 진현동 토함산 서쪽 중턱에 있는 신라시대의 절. 대한불교조계종 제11교구 본사이다.</p>
+                                </div>
+                                <img src="files/sightsee_menu_3.jpg" alt="">
+                            </div>
+                        </li>
+                        <li>
+                            <div class="getB">
+                                <div class="getB_Ex">
+                                    <div class="getB_Name">경주세계문화엑스포</div>
+                                    <br>
+                                    <p class="getB_what"> 경주세계문화엑스포는 반만년 유구한 문화가 응축돼 있는 ‘지붕 없는 박물관’ 경주에서 한국인의 문화 자긍심을 드높이고, 우리문화와 세계문화의 접목을 통해 인류문화 발전에 기여하고자 경상북도가 지난 96년에 조직하였다.</p>
+                                </div>
+                                <img src="files/sightsee_menu_4.jpg" alt="">
+                            </div>
+                        </li>
+                        <li>
+                            <div class="getB">
+                                <div class="getB_Ex">
+                                    <div class="getB_Name">동궁과 월지</div>
+                                    <br>
+                                    <p class="getB_what"> 경주 동궁과 월지는 신라 왕궁의 별궁터이다. 다른 부속건물들과 함께 왕자가 거처하는 동궁으로 사용되면서, 나라의 경사가 있을 때나 귀한 손님을 맞을 때
+                                        이곳에서 연회를 베풀었다고 한다.</p>
+                                </div>
+                                <img src="files/sightsee_menu_2.png" alt="">
+                            </div>
+                        </li>
+                        <li>
+                            <div class="getB">
+                                <div class="getB_Ex">
+                                    <div class="getB_Name">동궁과 월지</div>
+                                    <br>
+                                    <p class="getB_what"> 경주 동궁과 월지는 신라 왕궁의 별궁터이다. 다른 부속건물들과 함께 왕자가 거처하는 동궁으로 사용되면서, 나라의 경사가 있을 때나 귀한 손님을 맞을 때
+                                        이곳에서 연회를 베풀었다고 한다.</p>
+                                </div>
+                                <img src="files/sightsee_menu_2.png" alt="">
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </body>
+
+</html>

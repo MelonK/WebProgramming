@@ -1,0 +1,44 @@
+h2 {margin: 0%; font-size: 70px; 
+    text-align: center;}
+* {margin: 0;
+padding: 0;
+border: 0;}
+.bar {width: 100%;
+    position: relative;
+    height: 50px;
+    background-color: goldenrod;
+    text-align: left;
+    }
+.bar2 {width: 1000px;
+    height: 77px;
+    margin: 0 auto;
+    position: relative;}
+ul {overflow:hidden;}
+ul li {display: inline-block;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: left;
+    list-style-type: none;
+    padding: 15px 140px 0px 0px;}
+ul li a {text-decoration: none; 
+    color: white;}
+ul li a:hover {color: aqua;}
+.box {display:none;}
+ul ul {display: none; 
+    position: absolute;
+    background-color: goldenrod;
+    float: none;
+    padding: 0;
+    margin: 0;}
+ul li:hover ul {display: block;}
+ul ul li {float: none;}
+#종류 ul {float: none;}
+td {overflow: visible;}
+p {margin: 0% 20% 0% 20%;}
+a {text-decoration: none;}
+.box7 {margin: 0% 20% 0% 30%; font-size: 20px;}
+.box6 { margin: 0% 0% 0% 35%; font-size: 20px;}
+.his {margin: 0% 20% 0% 40%}
+body {background-image: url('사진/배경용3.jpg'); background-size: 100%;}
+.box1 {font: bolder; font-size: 30px;}
+.box2 {font-size: 25px;}
